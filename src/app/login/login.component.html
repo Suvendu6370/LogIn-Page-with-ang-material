@@ -1,0 +1,29 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <mat-card class="login-card">
+      <mat-card-content>
+        <div class="title-container">
+          <mat-card-title>Login</mat-card-title>
+        </div>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" type="text" placeholder="Enter your Name" >
+          <mat-error *ngIf="loginForm.get('name')?.hasError('required')">Name is required</mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Enter your password">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+        </mat-form-field>
+  
+        <mat-checkbox formControlName="rememberMe" color="primary" class="remember-me" 
+          (change)="onRememberMeChange($event)">Remember me</mat-checkbox>
+      </mat-card-content>
+  
+      <mat-card-actions>
+        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" class="login-button" (click)="onclick()">Login</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+  
