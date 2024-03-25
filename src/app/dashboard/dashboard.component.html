@@ -46,10 +46,14 @@
       <span>Logout</span>
     </button>
   </mat-sidenav>
+
   <mat-sidenav-content>
-    <div class="content mat-elevation-z8">
-      <h3  style="justify-content:center">CONGRATS {{name.toUpperCase()}}</h3>
-      <router-outlet></router-outlet>
+  <div class="content mat-elevation-z8">
+    <div class="centered-content">
+      <h3 class="congrats-message"><b>CONGRATS {{name.toUpperCase()}}</b></h3>
     </div>
+    <router-outlet></router-outlet>
+  </div>
   </mat-sidenav-content>
+
 </mat-sidenav-container>

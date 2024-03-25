@@ -11,6 +11,23 @@ mat-toolbar {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
+  .centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f38bdd;
+  }
+  .congrats-message {
+    background-color: #e73333;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(243, 245, 245,1);
+    text-align: center;
+  }
+  
+  
   .content {
     height: calc(100vh - 130px);
     border-radius: 10px;
